@@ -1,0 +1,356 @@
+/************* GENERAL *********/
+html{
+    font-size: 62.5%;
+}
+body{
+
+    font-family: 'Bree Serif', serif;
+    font-size: 1.8rem;
+    background-image: url(../img/fond.png);
+    background-repeat: repeat;
+}
+
+/************** HEADER *************/
+header img, header img + span {
+    width: 4rem;
+    font-size: 4rem;
+}
+.header-page, .header-page div a{
+   display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+header a{
+    font-size: 2rem;
+    text-decoration: none;
+ 
+    color: rgb(168, 167, 167);  
+    padding: 2rem 0;
+}
+
+/************** MAIN *************/
+.column, .main-header,.competence {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header{
+    background: url(../img/bg_header.png) no-repeat center center;
+	background-size: cover;
+
+}
+.main-header p{
+    color: honeydew;
+    text-align: center;
+}
+.main-header a{
+    background-color: #e94770;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-bottom: 3rem;
+    color: honeydew;
+}
+
+h1{
+    color: honeydew;
+    padding: 0 6rem;
+    text-align: center;
+}
+h2{
+    font-size: 3.5rem;
+    padding: 2rem;
+    border-bottom: 0.1rem solid rgb(221, 221, 221);
+}
+h3{
+    font-size: 3rem;
+}
+span{
+    text-transform: uppercase;
+}
+h2,h3, .realisation a{
+    color:#e94770;
+    text-decoration: none;
+}
+.competence h3{
+    color:#616060;
+}
+.service{
+    padding:0 5rem;
+}
+.service article{
+    color : rgb(185, 185, 185);
+}
+.service article i{
+    font-size: 2.5rem;
+    background-color: rgb(219, 214, 214);
+    color: grey;
+    border-radius: 50%;
+    
+    padding:2.5rem;
+    border: 0.2rem solid rgb(185, 185, 185);
+}
+
+.realisation{
+    color :  rgb(185, 185, 185);
+    padding:0 5rem;
+}
+
+.realisation img{
+    width:100%;
+}
+.realisation a{
+    margin-left: 2rem;
+}
+
+.contact{
+    margin-bottom: 5rem;
+    padding:0 7rem;
+}
+.contact p{
+    color: rgb(185, 185, 185);
+}
+form{
+    margin:0 5rem;
+}
+form input[type="text"], form textarea{
+    width:80%;
+    padding:2.5rem 2rem 2rem 10rem;
+    margin-bottom: 2rem;
+    border-radius: 20rem;
+    border: 0.1rem solid rgb(223, 223, 223);  
+}
+form input[type="submit"] {
+    padding:0.2rem 3rem ;
+    margin-right: 0.2rem;
+    color:aliceblue;
+    background-color: #e94770;
+    border:1.5rem solid #e94770;
+}
+form input[type="reset"] {
+    padding:0.2rem 3rem ;
+    color: aliceblue;
+    background-color: #7b7b7b;
+    border: 1.5rem solid #7b7b7b;
+}
+
+input[name="name"]{
+    background-image: url(../img/bg_form_name.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 5rem;
+}
+input[name="mail"]{
+    background-image: url(../img/bg_form_mail.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 5rem;
+}
+textarea{
+    background-image: url(../img/bg_form_message.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 5rem;
+}
+/********* FOOTER ************/
+footer{
+    margin-top: 5%;
+}
+footer nav a{
+    margin-right: 1%;
+    font-size: 2.5rem;
+    text-align: center;
+    
+}
+footer> img{
+    display: block;
+    margin: auto;
+    width: 50px;
+}
+footer> p{
+    color: rgb(168, 167, 167); 
+    text-align: center;
+    margin-top: -10px;
+    font-size: small;
+}
+footer a{
+    color:#e94770;
+    width: 100%;
+    text-decoration: none;
+}
+
+/********* ANIMATION ***********/
+.header-page a:first-child{
+    transition-property: all;
+    transition-duration: 1.5s;
+}
+.header-page a{
+    transition-duration: 1.5s;
+    transform:translateY(-10px);
+}
+.header-page a:hover{
+    transform:scale(1.3) ;
+    color:#e94770;
+    
+}
+
+.service i:hover{
+    /* transition-property: all;
+    transition-duration: 1s; */
+    animation: bounce 0.5s infinite;
+}
+
+/* .service i:hover{
+    transform:translateY(-40px);
+} */
+@keyframes bounce{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-40px);
+    }
+}
+
+.realisation img:hover{
+    transition-duration: 1.5s;
+    transform:scale(2);
+    
+}
+.competence h3{
+    animation-name: couleur;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes couleur{
+    0%{
+        color:#e94770;
+    }
+    20%{
+        color:#7b7b7b
+    }
+    30%{
+        color:#745757;
+    }
+    100%{
+        color:gray;
+    }
+}
+/* *********** DESKTOP CSS *******************/
+@media screen and (min-width:1025px){
+
+    .header-page{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .logo a{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 4rem;
+        width: 25%;
+    }
+    .header-page a{
+        font-size: 1.5rem;
+    }
+   
+    .service article{
+        margin-right: 1rem;
+        text-align: center;
+        padding:0 7rem ;
+    }
+    .competence, .service,.header-page{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .competence, .service{
+        margin:0 5rem;
+    }
+    .realisation article> img{
+        width:40%;
+    }
+    
+    .floatRight{
+        float:right;
+    }
+    .floatLeft{
+        float:left;
+        margin-right: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    form{
+        width:90%;
+    }
+
+    form input[type="text"]{
+        width:50%;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+    form textarea{
+        width:90%;
+    }
+}
+
+/*********** TABLETTE CSS *************/
+@media screen and (min-width:768px) and (max-width: 1024px){
+    
+     
+    .header-page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 4rem;
+        width: 25%;
+    }
+    .realisation article> img{
+        width:40%;
+    }
+    .floatRight{
+        float:right;
+    }
+    .floatLeft{
+        float:left;
+        margin-right: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    form{
+        width:90%;
+        
+    }
+
+    form input[type="text"]{
+        width:50%;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+    form textarea{
+        width:85%;
+    }
+
+}
